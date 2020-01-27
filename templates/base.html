@@ -1,0 +1,143 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euge & Beni 22.08.2020</title>
+
+
+    <!-- Library CSS -->
+    <link href="{% static 'css/wedding_library.css' %}" rel="stylesheet">
+
+    <!-- Icons CSS -->
+    <link href="{% static 'css/themify-icons.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/wedding_style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/min.css' %}" type="text/css" media="screen">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- Preloader -->
+<div class="wed_page_loader">
+    <div class="wed_story_content">
+        <div class="wed_heart_container_row_4">
+            <img class="wed_fourth_heart_1" src="{% static 'images/small_people/heart_1.png' %}" alt="">
+            <img class="wed_fourth_heart_2" src="{% static 'images/small_people/heart_2.png' %}" alt="">
+            <img class="wed_fourth_heart_3" src="{% static 'images/small_people/heart_3.png' %}" alt="">
+        </div>
+        <div class="wed_story_small_img">
+            <img src="{% static 'images/small_people/small_couple.png' %}" alt="">
+        </div>
+
+    </div>
+</div>
+<!-- Preloader End-->
+
+<!-- Firefly -->
+<div class="wed_firefly">
+    <div class="jqueryFireFly" data-total="80" data-minPixel="4" data-maxPixel="9"></div>
+</div>
+
+<!-- Page -->
+<div class="wed_page" id="wed_page">
+
+    <!-- Header -->
+    <header>
+        <nav class="wed_light_nav wed_transp_nav">
+            <div class="container">
+
+                <!-- couple header -->
+                <a href="/">
+                <img class="wed_couple_header wed_kissing_couple animated extra" src="{% static 'images/3.png' %}"
+                     alt=""/>
+                <img class="wed_couple_header wed_white_couple animated extra"
+                     src="{% static 'images/3_white_couple.png' %}" alt=""/></a>
+                <!-- couple header end -->
+
+                <!-- Logo -->
+                <a href="/" class="wed_logo wed_logo_animation">Euge & Beni</a>
+
+                <!-- Text Logo -->
+                <div class="wed_logo_und">Wedding</div>
+
+
+                <div class="wed_top_menu_mobile_link">
+                    <i class="ti ti-menu"></i>
+                </div>
+                <!-- Top Menu -->
+               <div class="wed_top_menu_cont">
+                  <ul class="wed_top_menu">
+                    <li><a href="alojamientos">Alojamientos</a>
+                    </li>
+                    <li><a href="ubicacion">Ubicación</a>
+                    </li>
+                    <li><a href="01_05_accomodation.html#">Regalo</a>
+                    </li>
+                    <li><a href="confirmacion">Confirmación</a>
+                    </li>
+                  </ul>
+              </div>
+                <!-- Top Menu End -->
+            </div>
+            <!-- container end -->
+        </nav>
+
+    </header>
+    <!-- Header End -->
+
+                {% block content %}
+                {% endblock %}
+
+        <!-- White border -->
+        <div class="wed_water_border text-center">
+            <!-- section -->
+            <section id="rsvp" class="wed_section_inner wed_wht_txt wed_image_bck wed_fixed"
+                     data-stellar-background-ratio="-0.2" data-image="{% static 'images/fashion_couple/lisboa.jpg' %}">
+                <!-- Over -->
+                <div class="wed_over" data-color="#a67ddc" data-opacity="0.7"></div>
+                <div class="container wed_great_titles">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wed_footer_txt">
+                                <h2 class="wed_form_txt">Gracias!!</h2>
+                                <h3>Euge & Beni</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--section end -->
+
+        </div>
+
+</div>
+
+<!-- JQuery -->
+<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+
+<!-- Library JS -->
+<script src="{% static 'js/wedding_min_library.js' %}"></script>
+<script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'js/min.js' %}"></script>
+
+<!-- Theme JS -->
+<script src="{% static 'js/wedding_min_script.js' %} "></script>
+
+
+</body>
+</html>
