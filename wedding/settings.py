@@ -25,7 +25,7 @@ SECRET_KEY = '$q+a7vep6374sj)sb1!7d8agg6mz0xc503!%!um6n$d!d5qzvi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,3 +125,12 @@ STATICFILES_DIRS = (
 )
 
 APPEND_SLASH = False
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_FEEDBACK_USER = 'eugeybeniboda@gmail.com'
+with open(os.path.join(BASE_DIR, '.keys/email_feedback_pwd.txt')) as f:
+    EMAIL_FEEDBACK_PASSWORD = f.read().strip()
+
+EMAIL_PORT = 587
+EMAIL_RECIPIENT_LIST = ['gon.beni@gmail.com']

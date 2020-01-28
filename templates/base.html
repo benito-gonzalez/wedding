@@ -14,7 +14,7 @@
     <link href="{% static 'css/wedding_library.css' %}" rel="stylesheet">
 
     <!-- Icons CSS -->
-    <link href="{% static 'css/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'fonts/themify-icons.css' %}" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="{% static 'css/wedding_style.css' %}" rel="stylesheet">
@@ -24,6 +24,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
 
 </head>
 
@@ -62,10 +65,10 @@
 
                 <!-- couple header -->
                 <a href="/">
-                <img class="wed_couple_header wed_kissing_couple animated extra" src="{% static 'images/3.png' %}"
-                     alt=""/>
-                <img class="wed_couple_header wed_white_couple animated extra"
-                     src="{% static 'images/3_white_couple.png' %}" alt=""/></a>
+                    <img class="wed_couple_header wed_kissing_couple animated extra" src="{% static 'images/3.png' %}"
+                         alt=""/>
+                    <img class="wed_couple_header wed_white_couple animated extra"
+                         src="{% static 'images/3_white_couple.png' %}" alt=""/></a>
                 <!-- couple header end -->
 
                 <!-- Logo -->
@@ -76,21 +79,31 @@
 
 
                 <div class="wed_top_menu_mobile_link">
-                    <i class="ti ti-menu"></i>
+                    <i class="fa fa-bars"></i>
                 </div>
                 <!-- Top Menu -->
-               <div class="wed_top_menu_cont">
-                  <ul class="wed_top_menu">
-                    <li><a href="alojamientos">Alojamientos</a>
-                    </li>
-                    <li><a href="ubicacion">Ubicación</a>
-                    </li>
-                    <li><a href="01_05_accomodation.html#">Regalo</a>
-                    </li>
-                    <li><a href="confirmacion">Confirmación</a>
-                    </li>
-                  </ul>
-              </div>
+                <div class="wed_top_menu_cont">
+                    <ul class="wed_top_menu">
+                        <li><a href="organizacion">Cómo organizarse</a>
+                        </li>
+                        <li><a href="alojamientos">Alojamientos</a>
+                        </li>
+                        <li><a href="ubicacion">El gran día</a>
+                        </li>
+                        <li><a href="confirmacion">Confirmación</a>
+                        </li>
+                        <li><a href="regalo-boda">Regalo de boda</a>
+                        </li>
+
+                        <li class="wed_parent"><a href="#">Otros <i class="fas fa-angle-down"></i> </a>
+                            <ul>
+                                <li><a href="peluqerias">Peluquerías</a></li>
+                                <li><a href="regalo_boda">Regalo de boda</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
                 <!-- Top Menu End -->
             </div>
             <!-- container end -->
@@ -99,31 +112,31 @@
     </header>
     <!-- Header End -->
 
-                {% block content %}
-                {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-        <!-- White border -->
-        <div class="wed_water_border text-center">
-            <!-- section -->
-            <section id="rsvp" class="wed_section_inner wed_wht_txt wed_image_bck wed_fixed"
-                     data-stellar-background-ratio="-0.2" data-image="{% static 'images/fashion_couple/lisboa.jpg' %}">
-                <!-- Over -->
-                <div class="wed_over" data-color="#a67ddc" data-opacity="0.7"></div>
-                <div class="container wed_great_titles">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="wed_footer_txt">
-                                <h2 class="wed_form_txt">Gracias!!</h2>
-                                <h3>Euge & Beni</h3>
-                            </div>
+    <!-- White border -->
+    <div class="wed_water_border text-center">
+        <!-- section -->
+        <section id="rsvp" class="wed_section_inner wed_wht_txt wed_image_bck wed_fixed"
+                 data-stellar-background-ratio="-0.2" data-image="{% static 'images/fashion_couple/lisboa.jpg' %}">
+            <!-- Over -->
+            <div class="wed_over" data-color="#a67ddc" data-opacity="0.7"></div>
+            <div class="container wed_great_titles">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wed_footer_txt">
+                            <h2 class="wed_form_txt">Gracias!!</h2>
+                            <h3>Euge & Beni</h3>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </section>
-            <!--section end -->
+        </section>
+        <!--section end -->
 
-        </div>
+    </div>
 
 </div>
 
@@ -134,6 +147,9 @@
 <script src="{% static 'js/wedding_min_library.js' %}"></script>
 <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
 <script src="{% static 'js/min.js' %}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 <!-- Theme JS -->
 <script src="{% static 'js/wedding_min_script.js' %} "></script>

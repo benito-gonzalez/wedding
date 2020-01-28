@@ -6,23 +6,23 @@
 {% block content %}
 
     <!-- PAGE TITLE SMALL -->
-    <div class="wed_page_title wed_page_title_great wed_image_bck wed_fixed wed_wht_txt" data-stellar-background-ratio="0.2" data-image="{% static 'images/fashion_couple/slider1.jpg' %}">
+    <div class="wed_page_title wed_page_title_great wed_image_bck wed_fixed wed_wht_txt"
+         data-stellar-background-ratio="0.2" data-image="{% static 'images/fashion_couple/slider1.jpg' %}">
 
 
-      <!-- Over -->
-      <div class="wed_over" data-color="#8630fc" data-opacity="0.9"></div>
-      <div class="wed_over" data-color="#000" data-opacity="0.1"></div>
+        <!-- Over -->
+        <div class="wed_over" data-color="#8630fc" data-opacity="0.9"></div>
+        <div class="wed_over" data-color="#000" data-opacity="0.1"></div>
 
-      <div class="container text-left">
-        <div class="row">
-          
-          <div class="col-md-8">
-            <h1 class="wed_h1_title">Reservation</h1>
-            <h3>Some Subtitle</h3>
-          </div>
+        <div class="container text-left">
+            <div class="row">
 
+                <div class="col-md-8">
+                    <h3 class="wed_h3_title">Confirma tu asistencia</h3>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- PAGE TITLE SMALL END-->
@@ -30,48 +30,84 @@
     <!-- Content -->
     <section id="wed_content" class="wed_content">
 
-      <!-- section -->
-      <section class="wed_section_innerpage">
-        <div class="container text-center  wed_great_titles">
-          <div class="row">
-            <div class="col-md-8 col-md-pull-2 col-md-push-2 col-sm-12">
-            <h2 class="wed_form_txt">Be our guest!</h2>
-            <p class="wed_form_txt">Cupiditate neque libero porro nulla.</p>
-              <form id="wed_form" class="wed_form">
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" placeholder="Name" name="name" required>
-                  </div>
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" placeholder="E-mail" name="email" required>
-                  </div>
-                  <div class="col-md-12">
-                    <select class="form-control" name="guests" required>
-                      <option value="">#Guests</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <textarea class="form-control" placeholder="Message" name="message"></textarea>
-                    <input type="submit" class="btn btn_new wed_btn_margbot" value="Send">
-                  </div>
+        <!-- section -->
+        <section class="wed_section_innerpage">
+            <div class="container text-center  wed_great_titles">
 
-                </div>
-              </form>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="success-form-height">
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-5 col-lg-2 justify-content-center align-self-center">
+                                    <div class="check_mark">
+                                        <div class="sa-icon sa-success animate">
+                                            <span class="sa-line sa-tip animateSuccessTip"></span>
+                                            <span class="sa-line sa-long animateSuccessLong"></span>
+                                            <div class="sa-placeholder"></div>
+                                            <div class="sa-fix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 text-center text-lg-left justify-content-center align-self-center mb-lg-4">
+                                    <div class="success-message">
+                                        {{ message }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="row">
+                        <div class="col-md-8 col-md-pull-2 col-md-push-2 col-sm-12">
+                            <h2 class="wed_form_txt">¿Te lo vas a perder?</h2>
+                            <p class="wed_form_txt">Nos encataría contar contigo, por favor confirma tu asistencia lo
+                                antes
+                                posible.</p>
+                            <form method="post">
+                                {% csrf_token %}
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" placeholder="Nombre" name="name" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <select class="form-control" name="guests" required>
+                                            <option value="">Numero de invitados</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <p>
+                                    <div class="text-left">Indica el nombre de los invitados y cualquier tipo de
+                                        intolerancia o alergia
+                                    </div>
+                                    </p>
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" placeholder="Mensaje" name="message"></textarea>
+                                        <button type="submit" class="btn btn_new wed_btn_margbot" value="Enviar">Enviar!</button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                        <!-- col end -->
+                    </div>
+                    <!-- row end -->
+                {% endif %}
 
             </div>
-            <!-- col end -->
-          </div>
-          <!-- row end -->
-        </div>
-        <!-- container end -->
+            <!-- container end -->
 
         </section>
-        <!-- section end -->      
+        <!-- section end -->
 
     </section>
     <!--Content end -->

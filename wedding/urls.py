@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import TemplateView
+from app_wedding import views
 
 
 urlpatterns = [
@@ -23,5 +24,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
     path('alojamientos', TemplateView.as_view(template_name='alojamientos.html')),
     path('ubicacion', TemplateView.as_view(template_name='ubicacion.html')),
-    path('confirmacion', TemplateView.as_view(template_name='confirmacion.html')),
+    path('organizacion', TemplateView.as_view(template_name='organizacion.html')),
+    path('regalo-boda', TemplateView.as_view(template_name='regalo-boda.html')),
+    path('confirmacion', views.ContactFormView.as_view()),
 ]
