@@ -3,4 +3,5 @@ __pycache__/
 db.sqlite3
 venv/
 wedding/__pycache__/
+wedding/.is_development
 .keys/
