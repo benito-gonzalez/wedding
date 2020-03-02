@@ -6,7 +6,7 @@ import sys
 
 def main():
     BASE_DIR = os.path.dirname(__file__)
-    if os.path.isfile(BASE_DIR + '.is_development'):
+    if os.path.isfile(BASE_DIR + '/.is_development'):
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wedding.settings.development')
     else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wedding.settings.production')

@@ -6,6 +6,7 @@ from django.conf import settings
 class ContactForm(forms.Form):
 
     name = forms.CharField(error_messages={'required': 'Por favor, indique su nombre'})
+    bus = forms.CharField(error_messages={'required': 'Por favor, indique indique si acudirá en autobús'})
     guests = forms.CharField(error_messages={'required': 'Por favor, indique el número total de invitados'})
     message = forms.CharField(error_messages={'required': 'Indique el nombre de los invitados y cualquier tipo de alergia.'})
 

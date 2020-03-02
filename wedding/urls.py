@@ -26,5 +26,7 @@ urlpatterns = [
     path('ubicacion', TemplateView.as_view(template_name='ubicacion.html')),
     path('organizacion', TemplateView.as_view(template_name='organizacion.html')),
     path('regalo-boda', TemplateView.as_view(template_name='regalo-boda.html')),
+    path('peluquerias', TemplateView.as_view(template_name='peluquerias.html')),
+    path('manicura', TemplateView.as_view(template_name='manicura.html')),
     path('confirmacion', views.ContactFormView.as_view()),
 ]
