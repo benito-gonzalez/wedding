@@ -55,8 +55,7 @@ ROOT_URLCONF = 'wedding.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '../templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, '../templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,4 +132,4 @@ with open(os.path.join(BASE_DIR, '../.keys/email_feedback_pwd.txt')) as f:
     EMAIL_FEEDBACK_PASSWORD = f.read().strip()
 
 EMAIL_PORT = 587
-EMAIL_RECIPIENT_LIST = ['gon.beni@gmail.com']
+EMAIL_RECIPIENT_LIST = ['gon.beni@gmail.com', 'eugenia.sanchez.rodriguez@gmail.com']

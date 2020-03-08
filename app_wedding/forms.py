@@ -19,8 +19,8 @@ class ContactForm(forms.Form):
                 use_tls=settings.EMAIL_USE_TLS
         ) as connection:
             send_mail(
-                self.data["name"] + " \t " + self.data["guests"],
-                self.data["message"],
+                f"Confirmación de asistencia: {self.data['name']}",
+                f"Número de invitados: {self.data['guests']}\nAutobús?: {self.data['bus']}\nAlgún mensaje especial: {self.data['message']}",
                 settings.EMAIL_FEEDBACK_USER,
                 settings.EMAIL_RECIPIENT_LIST,
                 connection=connection,
