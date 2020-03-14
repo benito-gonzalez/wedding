@@ -165,8 +165,9 @@
 			margin: 20px auto;
 		}
 	.wed_section_inner .container {
-		padding-top: 96px;
-		padding-bottom: 96px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
 	}
 	.wed_section_outter .container {
 		padding-top: 26px;

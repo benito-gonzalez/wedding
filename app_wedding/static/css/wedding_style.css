@@ -182,7 +182,7 @@ html {
 		background-repeat: no-repeat;
 	}
 	.text-center .wed_wht_txt h3 {
-		max-width: 40%;
+		max-width: 50%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1522,7 +1522,6 @@ textarea.form-control {
 @media (max-width: 600px) {
   .story-section ul li:nth-child(odd) img {
     float: none;
-    display: none;
   }
 }
 
@@ -1572,7 +1571,6 @@ textarea.form-control {
 @media (max-width: 600px) {
   .story-section ul li:nth-child(even) img {
     float: none;
-    display: none;
   }
 }
 
