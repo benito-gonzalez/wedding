@@ -15,34 +15,6 @@
 	 	$(this).css('transition-delay', '0.'+randomNumber+'s');
 	 });
 
-
-// Particles
-	if ($('.wed_particles').length>0) {
-		$('.wed_particles').particleground( {
-			   dotColor: '#fff',
-		    lineColor: '#fff',
-		    particleRadius: '3',
-		    lineWidth: '0.5'
-
-			});
-		};
-	/*Firefly*/
-	if ($('.jqueryFireFly').length>0) {
-		$('.jqueryFireFly').each(function(){
-			var total = $(this).attr('data-total');
-			var minPixel = $(this).attr('data-minPixel');
-			var maxPixel = $(this).attr('data-maxPixel');
-			$.firefly({
-			  minPixel: minPixel,
-       	maxPixel: maxPixel,
-				color: 'none',
-				total : total,
-				twinkle: 0.9,
-				on:'.wed_firefly'
-			});
-		});
-		
-	};
 	/*Youtube Player*/
 
 	if ($('#bgndVideo').length>0) {
